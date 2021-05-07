@@ -1,0 +1,63 @@
+footer {
+    padding-top: 60px;
+    
+    &::after {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 140px;
+        background-image: url('../img/footer-montagne-bottom.jpg');
+        background-position: bottom;
+        background-repeat: no-repeat;
+    }
+    .footer-wrapper {
+        display: flex;
+
+        .footer-left {
+            width: 40%;
+    
+            .footer-logo {
+                width: 320px;
+
+                img {
+                    width: 100%;
+                }
+            }
+            .legal {
+                p{
+                    color: $textColor;
+                    font-weight: $fontWeightLegalFooter;
+                }
+            }
+    
+        }
+
+        .footer-right {
+            width: 60%;
+            
+            .footer-right-wrapper {
+                display: flex;
+                flex-wrap: wrap;
+
+    
+                .link-list {
+                    width: 50%;
+                    margin-bottom: 20px;
+
+                    .link-title{
+                        font-size: 25px;
+                        color: $textColor;
+        
+                    }
+        
+                    .footer-link {
+                        text-decoration: none;
+                        color: $textColor;
+                        line-height: 40px;
+                        font-weight: $fontWeightLinkFooter;
+                    }
+                }
+            }
+        }
+    }
+}

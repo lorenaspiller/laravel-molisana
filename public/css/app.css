@@ -18,6 +18,14 @@ body {
   text-transform: uppercase;
 }
 
+.capitalize {
+  text-transform: capitalize;
+}
+
+.no-style {
+  list-style: none;
+}
+
 .logo {
   width: 240px;
   margin: 0 auto;
@@ -69,4 +77,54 @@ main .cards .card {
 main .cards .card img {
   width: 100%;
   display: block;
+}
+
+footer {
+  padding-top: 60px;
+}
+footer::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 140px;
+  background-image: url("../img/footer-montagne-bottom.jpg");
+  background-position: bottom;
+  background-repeat: no-repeat;
+}
+footer .footer-wrapper {
+  display: flex;
+}
+footer .footer-wrapper .footer-left {
+  width: 40%;
+}
+footer .footer-wrapper .footer-left .footer-logo {
+  width: 320px;
+}
+footer .footer-wrapper .footer-left .footer-logo img {
+  width: 100%;
+}
+footer .footer-wrapper .footer-left .legal p {
+  color: #848d9b;
+  font-weight: 600;
+}
+footer .footer-wrapper .footer-right {
+  width: 60%;
+}
+footer .footer-wrapper .footer-right .footer-right-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+footer .footer-wrapper .footer-right .footer-right-wrapper .link-list {
+  width: 50%;
+  margin-bottom: 20px;
+}
+footer .footer-wrapper .footer-right .footer-right-wrapper .link-list .link-title {
+  font-size: 25px;
+  color: #848d9b;
+}
+footer .footer-wrapper .footer-right .footer-right-wrapper .link-list .footer-link {
+  text-decoration: none;
+  color: #848d9b;
+  line-height: 40px;
+  font-weight: 600;
 }
