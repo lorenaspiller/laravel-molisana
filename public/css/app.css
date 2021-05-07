@@ -1,1 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.logo {
+  width: 200px;
+  margin: 0 auto;
+  padding: 30px 0;
+}
+.logo img {
+  width: 100%;
+}
+
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main-nav ul li.active a {
+  background-color: #b2e5fc;
+}
+.main-nav ul a {
+  color: #000;
+  text-decoration: none;
+  font-size: 22px;
+  padding: 15px;
+}
