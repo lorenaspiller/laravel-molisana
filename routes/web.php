@@ -150,7 +150,9 @@ Route::get('/', function () {
         } elseif ($pasta['tipo'] == 'cortissima'){
             $cortissima[] = $pasta;
         }
-    }
+    };
+
+   
 
     return view('home', [
         'lunghe' => $lunga,
