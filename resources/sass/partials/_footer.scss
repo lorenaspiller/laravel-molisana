@@ -13,11 +13,26 @@ footer {
     .footer-wrapper {
         display: flex;
 
+        @media screen and (max-width: 768px) {
+            flex-direction: column;
+
+        }
+
         .footer-left {
             width: 40%;
-    
+
+            @media screen and (max-width: 768px) {
+                width: 100%;
+                padding: 0 20px;
+                order: 2;
+            }
+   
             .footer-logo {
                 width: 320px;
+
+                @media screen and (max-width: 768px) {
+                    width: 250px;
+                }
 
                 img {
                     width: 100%;
@@ -34,11 +49,20 @@ footer {
 
         .footer-right {
             width: 60%;
+
+            @media screen and (max-width: 768px) {
+                width: 100%;
+                padding: 0 20px;
+                margin-top: 20px;
+            }
             
             .footer-right-wrapper {
                 display: flex;
                 flex-wrap: wrap;
 
+                @media screen and (max-width: 480px) {
+                    display: block;
+                }
     
                 .link-list {
                     width: 50%;

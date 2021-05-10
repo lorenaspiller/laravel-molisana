@@ -15,10 +15,23 @@ main {
         .cards {
             display: flex;
             flex-wrap: wrap;
-        
+            
             .card {
                 width: calc(100% / 3 - 20px);
                 margin: 10px;
+                transition: all 0.4s linear;
+
+                @media screen and (max-width: 768px) {
+                    width: calc(100% / 2 - 20px);
+                }
+
+                @media screen and (max-width: 480px) {
+                    width: 100%;
+                }
+
+                &:hover {
+                    transform: scale(1.1);
+                }
         
                 img {
                     width: 100%;
