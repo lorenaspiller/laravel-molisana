@@ -1,28 +1,31 @@
 main {
-    padding: 40px 0;
-    background-image:url('../img/fondo-pag-speciali.jpg');
-    background-size: cover;
-    background-position: center;
+    .main-home-page {
+        padding: 40px 0;
+        background-image:url('../img/fondo-pag-speciali.jpg');
+        background-size: cover;
+        background-position: center;
 
-    h2 {
-        margin-left: 10px;
-        color: $mainColor;
-        font-size: $fontSectionTitle;
-        font-weight: $fontWeightSectionTitle;
-    }
-    
-    .cards {
-        display: flex;
-        flex-wrap: wrap;
-    
-        .card {
-            width: calc(100% / 3 - 20px);
-            margin: 10px;
-    
-            img {
-                width: 100%;
-                display: block;
+        h2 {
+            margin-left: 10px;
+            color: $mainColor;
+            font-size: $fontSectionTitle;
+            font-weight: $fontWeightSectionTitle;
+        }
+        
+        .cards {
+            display: flex;
+            flex-wrap: wrap;
+        
+            .card {
+                width: calc(100% / 3 - 20px);
+                margin: 10px;
+        
+                img {
+                    width: 100%;
+                    display: block;
+                }
             }
         }
     }
+
 }

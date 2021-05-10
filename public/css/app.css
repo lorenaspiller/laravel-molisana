@@ -54,27 +54,27 @@ body {
   padding: 15px;
 }
 
-main {
+main .main-home-page {
   padding: 40px 0;
   background-image: url("../img/fondo-pag-speciali.jpg");
   background-size: cover;
   background-position: center;
 }
-main h2 {
+main .main-home-page h2 {
   margin-left: 10px;
   color: #002d73;
   font-size: 35px;
   font-weight: 600;
 }
-main .cards {
+main .main-home-page .cards {
   display: flex;
   flex-wrap: wrap;
 }
-main .cards .card {
+main .main-home-page .cards .card {
   width: calc(100% / 3 - 20px);
   margin: 10px;
 }
-main .cards .card img {
+main .main-home-page .cards .card img {
   width: 100%;
   display: block;
 }
