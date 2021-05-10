@@ -42,10 +42,20 @@ main {
     }
 
     .product {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
         background-color: $productBg;
         padding: 40px 0;
         color: $mainColor;
-
+        .left, .right {
+            i {
+                padding: 20px 10px;
+                color: #fff;
+                font-size: 30px;
+                background-color: $chevronBg;
+            }
+        }
         h1 {
             text-align: center;
         }
@@ -53,6 +63,8 @@ main {
         img {
             width: 100%;
         }
+
+
     }
 
 }

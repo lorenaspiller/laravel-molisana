@@ -97,9 +97,18 @@ main .main-home-page .cards .card img {
   display: block;
 }
 main .product {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   background-color: #b7dae5;
   padding: 40px 0;
   color: #002d73;
+}
+main .product .left i, main .product .right i {
+  padding: 20px 10px;
+  color: #fff;
+  font-size: 30px;
+  background-color: #dcedf2;
 }
 main .product h1 {
   text-align: center;

@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     
-    $data = config('paste');
+    $data = config('paste.data');
 
     $lunga = [];
     $corta = [];
@@ -32,41 +32,13 @@ Route::get('/', function () {
         }
     };
 
-    $links = [
-        'pastificio' => [
-            'Il Pastificio',
-            'Grano decorticato a pietra',
-            'Il Molise c\'è',
-            'Filiera Integrata',
-            '100 anni di pasta',
-            'Sartoria della pasta',
-            'Spaghetto quadrato',
-            'Le persone'
-        ],
-        'collezione da chef' => [
-            'Collezione da Chef',
-            'Grandi Cucine',
-            'Biologiche',
-            'Quadrate'
-        ],
-        'prodotti' => [
-            'Le Classiche',
-            'Le Integrali',
-            'Le Speciali',
-            'Le Biologiche',
-            'Le Gluten-Free',
-            'Le Semole',
-            'Le Extra di Lusso'
-        ]
-    ];
+    $links = config('paste.links');
 
     return view('home', [
         'lunghe' => $lunga,
         'corte' => $corta,
-        'cortissime' => $cortissima
-        ],
-        [
-            'links' => $links
+        'cortissime' => $cortissima,
+        'links' => $links
         ]
     );
 })->name('homepage');
@@ -109,47 +81,18 @@ Route::get('/ultime-notizie', function() {
 
 Route::get('prodotto/{id}', function($id) {
 
-    $data = config('paste');
-
+    $data = config('paste.data');
+    
     if($id >= count($data)) {
         abort(404);
     }
-
-
+    
     $pasta = $data[$id];
 
-
-    $links = [
-        'pastificio' => [
-            'Il Pastificio',
-            'Grano decorticato a pietra',
-            'Il Molise c\'è',
-            'Filiera Integrata',
-            '100 anni di pasta',
-            'Sartoria della pasta',
-            'Spaghetto quadrato',
-            'Le persone'
-        ],
-        'collezione da chef' => [
-            'Collezione da Chef',
-            'Grandi Cucine',
-            'Biologiche',
-            'Quadrate'
-        ],
-        'prodotti' => [
-            'Le Classiche',
-            'Le Integrali',
-            'Le Speciali',
-            'Le Biologiche',
-            'Le Gluten-Free',
-            'Le Semole',
-            'Le Extra di Lusso'
-        ]
-    ];
+    $links = config('paste.links');
+    
     return view('prodotto', [
-            'links' => $links
-        ],
-        [
+            'links' => $links,
             'pasta' => $pasta
         ]
     );
