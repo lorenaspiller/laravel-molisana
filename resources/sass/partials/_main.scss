@@ -28,4 +28,18 @@ main {
         }
     }
 
+    .product {
+        background-color: $productBg;
+        padding: 40px 0;
+        color: $mainColor;
+
+        h1 {
+            text-align: center;
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+
 }
