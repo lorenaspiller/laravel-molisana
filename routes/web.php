@@ -111,6 +111,10 @@ Route::get('prodotto/{id}', function($id) {
 
     $data = config('paste');
 
+    if($id >= count($data)) {
+        abort(404);
+    }
+
 
     $pasta = $data[$id];
 
