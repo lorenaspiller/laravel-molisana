@@ -32,7 +32,7 @@ Route::get('/', function () {
         }
     };
 
-    $links = config('paste.links');
+    $links = config('links.links');
 
     return view('home', [
         'lunghe' => $lunga,
@@ -45,34 +45,8 @@ Route::get('/', function () {
 
 
 Route::get('/ultime-notizie', function() {
-    
-    $links = [
-        'pastificio' => [
-            'Il Pastificio',
-            'Grano decorticato a pietra',
-            'Il Molise c\'è',
-            'Filiera Integrata',
-            '100 anni di pasta',
-            'Sartoria della pasta',
-            'Spaghetto quadrato',
-            'Le persone'
-        ],
-        'collezione da chef' => [
-            'Collezione da Chef',
-            'Grandi Cucine',
-            'Biologiche',
-            'Quadrate'
-        ],
-        'prodotti' => [
-            'Le Classiche',
-            'Le Integrali',
-            'Le Speciali',
-            'Le Biologiche',
-            'Le Gluten-Free',
-            'Le Semole',
-            'Le Extra di Lusso'
-        ]
-    ];
+    $links = config('links.links');
+
     return view('news', [
         'links' => $links
     ]);
@@ -85,15 +59,28 @@ Route::get('prodotto/{id}', function($id) {
     
     if($id >= count($data)) {
         abort(404);
-    }
-    
-    $pasta = $data[$id];
+    };
 
-    $links = config('paste.links');
+    //slider prodotti  
+    $pasta = $data[$id];
+    if ($id == count($data) - 1) {
+        $next = 0;
+        $prev = $id - 1;
+    } elseif ($id == 0) {
+        $prev = count($data) - 1;
+        $next = $id + 1;
+    } else {
+        $prev = $id - 1;
+        $next = $id + 1;
+    }
+
+    $links = config('links.links');
     
     return view('prodotto', [
             'links' => $links,
-            'pasta' => $pasta
+            'pasta' => $pasta,
+            'next' => $next,
+            'prev' => $prev
         ]
     );
 })->where('id', '[0-9]+')->name('prodotto');

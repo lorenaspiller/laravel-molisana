@@ -8,7 +8,7 @@
     
     <div class="product">
         <div class="left">
-            <a href=""><i class="fas fa-chevron-left"></i></a>
+            <a href="{{ route('prodotto', ['id' => $prev])}}"><i class="fas fa-chevron-left"></i></a>
         </div>
         <div class="inner-wrapper">
             <div class="container">
@@ -19,7 +19,7 @@
             </div> 
         </div>
         <div class="right">
-            <a href=""><i class="fas fa-chevron-right"></i></a>
+            <a href="{{ route('prodotto', ['id' => $next])}}"><i class="fas fa-chevron-right"></i></a>
         </div>
     </div>
 @endsection
